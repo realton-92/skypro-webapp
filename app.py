@@ -23,7 +23,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=8000):
     """Функция для запуска сервера."""
     server_address = ('', port)
-    httpd = server_class(server_address, handler_class)
+    httpd = server_class(server_address,  handler_class)
     print(f"Сервер запущен на порту {port}")
     print(f"Перейдите по адресу: http://localhost:{port}")
     httpd.serve_forever()
